@@ -1,0 +1,55 @@
+﻿@page "/"
+@page "/manageTask"
+@page "/manageTask/{Title}"
+@inject NavigationManager NavigationManager
+
+<PageTitle>Task Manager</PageTitle>
+
+<h3>Undone Tasks (@taskList.Count(task => !task.IsDone))</h3>
+
+@if (!string.IsNullOrEmpty(Title)){
+    AddNewTask(Title);
+    NavigateToManageTaskPage();
+}
+    <div class="bg-primary text-center h1">Task Manager</div>
+
+    <div class="container" id="main-container">
+
+        <div class "container bg-info" id="task-list-container">
+            
+                @foreach (var task in taskList) {
+                    <a href="/editPage/@task.Id/@task.Title/@task.IsDone" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <span class="col-9 mt-1" id="task-title">@task.Title</span>
+                    </a>
+                    <span> <input type="checkbox" @bind="task.IsDone"> </span>              
+                }
+            
+        </div>
+
+        <div class="d-grid mt-5">
+            <button class="btn btn-primary" @onclick="NavigateToAddTaskPage">ADD TASK</button>
+        </div>
+    </div>
+
+
+@code {
+    private static List<TaskItem> taskList = new();
+        
+        [Parameter]
+        public string Title{get; set;}
+        private void NavigateToAddTaskPage(){
+            NavigationManager.NavigateTo("/addTask");
+        }
+        private void NavigateToManageTaskPage(){
+            NavigationManager.NavigateTo("/manageTask");
+        }
+
+        public void AddNewTask(string title){
+            TaskItem taskItem = new TaskItem();
+            taskItem.Id = taskList.Count();
+            taskItem.Title = title;
+            taskItem.IsDone = false;
+            taskList.Add(taskItem);
+        }
+        
+}
