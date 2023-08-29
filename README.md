@@ -2,6 +2,9 @@
 
 Welcome to Task Manager! This application is designed to help you manage your tasks by providing a simple and intuitive interface to add, edit, and view tasks.
 
+##Prerequisite
+- [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) (latest version is recommended)
+
 ## Features
 
 1. **Manage Task Page**
