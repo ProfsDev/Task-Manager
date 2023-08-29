@@ -49,10 +49,6 @@ To run the Task Manager application locally, follow these steps:
    - Click "Delete" to delete the task.
 
 
-## License
-
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of the license.
-
 ---
 
 Thank you for using Task Manager to streamline your task management process. If you have any questions, don't hesitate to reach out!
