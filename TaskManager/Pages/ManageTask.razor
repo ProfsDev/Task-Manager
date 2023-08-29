@@ -1,27 +1,44 @@
-﻿@page "/"
+﻿@inject NavigationManager NavigationManager
+@page "/"
 @page "/manageTask"
-@page "/manageTask/{Title}"
-@inject NavigationManager NavigationManager
+@page "/manageTask/{Action}/{TaskTitle}"
+@page "/manageTask/{Action}/{TaskId:int}/{TaskTitle}"
 
 <PageTitle>Task Manager</PageTitle>
 
 <h3>Undone Tasks (@taskList.Count(task => !task.IsDone))</h3>
 
-@if (!string.IsNullOrEmpty(Title)){
-    AddNewTask(Title);
-    NavigateToManageTaskPage();
+@switch(@Action){
+    case "add":
+        AddNewTask(@TaskTitle);
+        NavigateToManageTaskPage();
+        break;
+
+    case "update":
+        UpdateTask(@TaskId, @TaskTitle);
+        Console.WriteLine("call update");
+        break;
+
+    case "delete":
+        DeleteTask(@TaskId);
+        Console.WriteLine("call delete");
+        NavigateToManageTaskPage();
+        break;
 }
+
+
+
     <div class="bg-primary text-center h1">Task Manager</div>
 
     <div class="container" id="main-container">
 
-        <div class "container bg-info" id="task-list-container">
+        <div class="container" id="task-list-container">
             
                 @foreach (var task in taskList) {
+                    <input type="checkbox" class="block-inline" @bind="task.IsDone">
                     <a href="/editPage/@task.Id/@task.Title/@task.IsDone" class="list-group-item list-group-item-action flex-column align-items-start">
-                        <span class="col-9 mt-1" id="task-title">@task.Title</span>
+                        <span class="col-9 mt-1 block-inline" id="task-title">@task.Title</span>
                     </a>
-                    <span> <input type="checkbox" @bind="task.IsDone"> </span>              
                 }
             
         </div>
@@ -35,21 +52,45 @@
 @code {
     private static List<TaskItem> taskList = new();
         
-        [Parameter]
-        public string Title{get; set;}
-        private void NavigateToAddTaskPage(){
-            NavigationManager.NavigateTo("/addTask");
-        }
-        private void NavigateToManageTaskPage(){
-            NavigationManager.NavigateTo("/manageTask");
-        }
+    [Parameter]
+    public string Title{get; set;}
+    [Parameter]
+    public int TaskId{get; set;}
+    [Parameter]
+    public string TaskTitle{get; set;}
+    [Parameter]
+    public string Action{get; set;}
+    private void NavigateToAddTaskPage(){
+        NavigationManager.NavigateTo("/addTask");
+    }
+    private void NavigateToManageTaskPage(){
+        NavigationManager.NavigateTo("/");
+    }
 
-        public void AddNewTask(string title){
-            TaskItem taskItem = new TaskItem();
-            taskItem.Id = taskList.Count();
-            taskItem.Title = title;
-            taskItem.IsDone = false;
-            taskList.Add(taskItem);
+    private static int idCounter = 0;
+    public void AddNewTask(string title){
+        TaskItem taskItem = new TaskItem();
+        taskItem.Id = idCounter++;
+        taskItem.Title = title;
+        taskItem.IsDone = false;
+        taskList.Add(taskItem);
+    }
+    public void UpdateTask(int id, string title){
+        foreach(var task in taskList){
+            if(task.Id == id){
+                task.Title = title;
+                break;
+            }
         }
+    }
+    public void DeleteTask(int id){
+        int listSize = taskList.Count;
+         for(int i = 0; i < listSize; i++){
+            if(taskList[i].Id == id){
+                taskList.RemoveAt(i);
+                break;
+            }
+        }
+    }
         
 }

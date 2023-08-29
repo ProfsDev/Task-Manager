@@ -5,8 +5,6 @@
 <h1 class="bg-primary text-center">Edit Task</h1>
 
 <div class="p-2 border text-center">
-        Is Completed<input type="checkbox" class="m-2" @bind="@IsDone">
-        <br>
         <input type="text" class="p-1" @bind="@TaskTitle">
         <div class="m-2 mt-5">
             <button class="btn btn-primary" @onclick="OnUpdate">UPDATE</button>
@@ -14,9 +12,7 @@
         </div>    
 </div>
 
-
 @code{
-
     [Parameter]
     public string TaskTitle{get; set;}
     [Parameter]
@@ -25,10 +21,10 @@
     public bool IsDone{get; set;}
 
     public void OnUpdate(){
-        NavigationManager.NavigateTo("/manageTask/updateTask/" + TaskId + "/" + TaskTitle + "/" + IsDone);
+        NavigationManager.NavigateTo("/manageTask/update/" + TaskId + "/" + TaskTitle);
     }
     public void OnDelete(){
 
-        NavigationManager.NavigateTo("/manageTask/deleteTask/" + TaskId + "/" + TaskTitle + "/" + IsDone);
+        NavigationManager.NavigateTo("/manageTask/delete/" + TaskId + "/" + TaskTitle);
     }
 }

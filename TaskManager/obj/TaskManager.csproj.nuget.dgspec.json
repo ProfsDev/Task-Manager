@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Prof\\Desktop\\Task Manager\\TaskManager\\TaskManager.csproj": {}
+    "E:\\Work\\SCYNETT\\Task Manager\\Task-Manager\\TaskManager\\TaskManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Prof\\Desktop\\Task Manager\\TaskManager\\TaskManager.csproj": {
+    "E:\\Work\\SCYNETT\\Task Manager\\Task-Manager\\TaskManager\\TaskManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Prof\\Desktop\\Task Manager\\TaskManager\\TaskManager.csproj",
+        "projectUniqueName": "E:\\Work\\SCYNETT\\Task Manager\\Task-Manager\\TaskManager\\TaskManager.csproj",
         "projectName": "TaskManager",
-        "projectPath": "C:\\Users\\Prof\\Desktop\\Task Manager\\TaskManager\\TaskManager.csproj",
+        "projectPath": "E:\\Work\\SCYNETT\\Task Manager\\Task-Manager\\TaskManager\\TaskManager.csproj",
         "packagesPath": "C:\\Users\\Prof\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Prof\\Desktop\\Task Manager\\TaskManager\\obj\\",
+        "outputPath": "E:\\Work\\SCYNETT\\Task Manager\\Task-Manager\\TaskManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Prof\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -2,13 +2,12 @@
 @inject NavigationManager NavigationManager
 <h1>Add New Task</h1>
 <input type="text" @bind="taskTitle">
-<input type="date">
 
 <button @onclick="NavigateToManageTask" class="btn btn-primary">Add Task</button>
     
 @code{
     private string? taskTitle;
     public void NavigateToManageTask(){
-        NavigationManager.NavigateTo("/manageTask/" + taskTitle);
+        NavigationManager.NavigateTo("/manageTask/add/" + taskTitle);
     }
 }

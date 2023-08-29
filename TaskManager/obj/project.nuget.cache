@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PayFvKREp2tIthSDdfyffMEfdFAojClhxaXC/C92e/Hw1P3IltnHGgzeHR2Psbe24CJ2XwcVgrAtZIBbswejIg==",
+  "dgSpecHash": "u7p59y4VhIEnsBSUiT8PGJrItSFu/MoOVROM+ed6R9PiqCLMrtr4RHU/YjNkpxorluSPyZ9eAiS3CSPk1Q5JkA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Prof\\Desktop\\Task Manager\\TaskManager\\TaskManager.csproj",
+  "projectFilePath": "E:\\Work\\SCYNETT\\Task Manager\\Task-Manager\\TaskManager\\TaskManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Prof\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.10\\microsoft.aspnetcore.authorization.7.0.10.nupkg.sha512",
     "C:\\Users\\Prof\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.10\\microsoft.aspnetcore.components.7.0.10.nupkg.sha512",
