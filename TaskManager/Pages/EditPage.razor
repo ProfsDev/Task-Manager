@@ -2,14 +2,16 @@
 @page "/editPage"
 @page "/editPage/{TaskId:int}/{TaskTitle}/{IsDone:bool}"
 
-<h1 class="bg-primary text-center">Edit Task</h1>
+<div class="border">
+    <div class="bg-info text-center display-6">Edit Task</div>
 
-<div class="p-2 border text-center">
+    <div class="p-2 text-center decorator-underline">
         <input type="text" class="p-1" @bind="@TaskTitle">
         <div class="m-2 mt-5">
             <button class="btn btn-primary" @onclick="OnUpdate">UPDATE</button>
             <button class="btn btn-outline-danger" @onclick="OnDelete">DELETE</button>
         </div>    
+    </div>
 </div>
 
 @code{

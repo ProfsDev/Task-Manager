@@ -16,7 +16,7 @@
 
     case "update":
         UpdateTask(@TaskId, @TaskTitle);
-        Console.WriteLine("call update");
+        NavigateToManageTaskPage();
         break;
 
     case "delete":
@@ -27,24 +27,32 @@
 }
 
 
+    <div class="border">
+        <div class="bg-info text-center display-6">Task Manager</div>
 
-    <div class="bg-primary text-center h1">Task Manager</div>
+        <div class="container" id="main-container">
 
-    <div class="container" id="main-container">
+            <div class="container" id="task-list-container">
+                
+                    @foreach (var task in taskList) {
+                        <input type="checkbox" class="block-inline" @bind="task.IsDone">
+                        @if(task.IsDone){
+                            <a href="/editPage/@task.Id/@task.Title/@task.IsDone" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <del class="col-9 mt-1 block-inline" id="task-title">@task.Title</del>
+                        </a>
+                        }else{
+                            <a href="/editPage/@task.Id/@task.Title/@task.IsDone" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <span class="col-9 mt-1 block-inline" id="task-title">@task.Title</span>
+                            </a>
+                        }
+                        <br>
+                    }
+                
+            </div>
 
-        <div class="container" id="task-list-container">
-            
-                @foreach (var task in taskList) {
-                    <input type="checkbox" class="block-inline" @bind="task.IsDone">
-                    <a href="/editPage/@task.Id/@task.Title/@task.IsDone" class="list-group-item list-group-item-action flex-column align-items-start">
-                        <span class="col-9 mt-1 block-inline" id="task-title">@task.Title</span>
-                    </a>
-                }
-            
-        </div>
-
-        <div class="d-grid mt-5">
-            <button class="btn btn-primary" @onclick="NavigateToAddTaskPage">ADD TASK</button>
+            <div class="d-grid mt-5 mb-3">
+                <button class="btn btn-primary" @onclick="NavigateToAddTaskPage">ADD TASK</button>
+            </div>
         </div>
     </div>
 
