@@ -1,7 +1,7 @@
 ﻿@inject NavigationManager NavigationManager
 @page "/"
 @page "/manageTask"
-@page "/manageTask/{Action}/{TaskTitle}"
+@page "/manageTask/{Action}/{TaskTitle}/{Month:int}/{Day:int}/{Year:int}"
 @page "/manageTask/{Action}/{TaskId:int}/{TaskTitle}"
 
 <PageTitle>Task Manager</PageTitle>
@@ -10,7 +10,8 @@
 
 @switch(@Action){
     case "add":
-        AddNewTask(@TaskTitle);
+        DateOnly myDate = new DateOnly(year:Year, month:Month, day:Day);
+        AddNewTask(@TaskTitle, myDate);
         NavigateToManageTaskPage();
         break;
 
@@ -38,11 +39,19 @@
                         <input type="checkbox" class="block-inline" @bind="task.IsDone">
                         @if(task.IsDone){
                             <a href="/editPage/@task.Id/@task.Title/@task.IsDone" class="list-group-item list-group-item-action flex-column align-items-start">
-                            <del class="col-9 mt-1 block-inline" id="task-title">@task.Title</del>
+                            <del class="col-9 mt-1 block-inline h5" id="task-title">@task.Title</del>
+                            <div>
+                                <small for="my-date">Due:</small>
+                                <small id="my-date">@task.Date</small>
+                            </div>
                         </a>
                         }else{
                             <a href="/editPage/@task.Id/@task.Title/@task.IsDone" class="list-group-item list-group-item-action flex-column align-items-start">
-                                <span class="col-9 mt-1 block-inline" id="task-title">@task.Title</span>
+                                <span class="col-9 mt-1 h5" id="task-title">@task.Title</span>
+                                <div>
+                                    <small for="my-date">Due:</small>
+                                    <small id="my-date">@task.Date</small>
+                                </div
                             </a>
                         }
                         <br>
@@ -63,6 +72,12 @@
     [Parameter]
     public string Title{get; set;}
     [Parameter]
+    public int Month{get; set;}
+    [Parameter]
+    public int Day{get; set;}
+    [Parameter]
+    public int Year{get; set;}
+    [Parameter]
     public int TaskId{get; set;}
     [Parameter]
     public string TaskTitle{get; set;}
@@ -76,11 +91,12 @@
     }
 
     private static int idCounter = 0;
-    public void AddNewTask(string title){
+    public void AddNewTask(string title, DateOnly date){
         TaskItem taskItem = new TaskItem();
         taskItem.Id = idCounter++;
         taskItem.Title = title;
         taskItem.IsDone = false;
+        taskItem.Date = date;
         taskList.Add(taskItem);
     }
     public void UpdateTask(int id, string title){

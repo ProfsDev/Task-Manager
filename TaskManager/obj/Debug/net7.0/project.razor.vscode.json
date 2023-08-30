@@ -190,7 +190,7 @@
         }
       },
       {
-        "HashCode": -1634604092,
+        "HashCode": -1873770286,
         "Kind": "Components.Component",
         "Name": "TaskManager.Pages.ManageTask",
         "AssemblyName": "TaskManager",
@@ -210,6 +210,36 @@
             "Metadata": {
               "Common.PropertyName": "Title",
               "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Month",
+            "TypeName": "System.Int32",
+            "DisplayName": "int TaskManager.Pages.ManageTask.Month",
+            "Metadata": {
+              "Common.PropertyName": "Month",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Day",
+            "TypeName": "System.Int32",
+            "DisplayName": "int TaskManager.Pages.ManageTask.Day",
+            "Metadata": {
+              "Common.PropertyName": "Day",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Year",
+            "TypeName": "System.Int32",
+            "DisplayName": "int TaskManager.Pages.ManageTask.Year",
+            "Metadata": {
+              "Common.PropertyName": "Year",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32"
             }
           },
           {
@@ -251,7 +281,7 @@
         }
       },
       {
-        "HashCode": 1564818556,
+        "HashCode": -2067968304,
         "Kind": "Components.Component",
         "Name": "TaskManager.Pages.ManageTask",
         "AssemblyName": "TaskManager",
@@ -271,6 +301,36 @@
             "Metadata": {
               "Common.PropertyName": "Title",
               "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Month",
+            "TypeName": "System.Int32",
+            "DisplayName": "int TaskManager.Pages.ManageTask.Month",
+            "Metadata": {
+              "Common.PropertyName": "Month",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Day",
+            "TypeName": "System.Int32",
+            "DisplayName": "int TaskManager.Pages.ManageTask.Day",
+            "Metadata": {
+              "Common.PropertyName": "Day",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Year",
+            "TypeName": "System.Int32",
+            "DisplayName": "int TaskManager.Pages.ManageTask.Year",
+            "Metadata": {
+              "Common.PropertyName": "Year",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32"
             }
           },
           {

@@ -5,13 +5,16 @@
     <div class="bg-info display-6 mb-5">Add New Task</div>
     <input type="text block" @bind="taskTitle" placeholder="Enter new Task">
     <br>
+    <input type="date" @bind="dateOnly" class="m-3">
+    <br>
 
     <div @onclick="NavigateToManageTask" class="btn btn-primary m-3">Add Task</div>
 </div>
     
 @code{
     private string? taskTitle;
+    private DateOnly? dateOnly;
     public void NavigateToManageTask(){
-        NavigationManager.NavigateTo("/manageTask/add/" + taskTitle);
+        NavigationManager.NavigateTo("/manageTask/add/" + taskTitle + "/" + dateOnly);
     }
 }
