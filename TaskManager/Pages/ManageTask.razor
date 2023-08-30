@@ -2,6 +2,7 @@
 @page "/"
 @page "/manageTask"
 @page "/manageTask/{Action}/{TaskTitle}/{Month:int}/{Day:int}/{Year:int}"
+@page "/manageTask/{Action}/{TaskId:int}/{TaskTitle}/{Month:int}/{Day:int}/{Year:int}"
 @page "/manageTask/{Action}/{TaskId:int}/{TaskTitle}"
 
 <PageTitle>Task Manager</PageTitle>
@@ -16,7 +17,7 @@
         break;
 
     case "update":
-        UpdateTask(@TaskId, @TaskTitle);
+        UpdateTask(@TaskId);
         NavigateToManageTaskPage();
         break;
 
@@ -38,7 +39,7 @@
                     @foreach (var task in taskList) {
                         <input type="checkbox" class="block-inline" @bind="task.IsDone">
                         @if(task.IsDone){
-                            <a href="/editPage/@task.Id/@task.Title/@task.IsDone" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <a href="/editPage/@task.Id/@task.Title/@task.Date" class="list-group-item list-group-item-action flex-column align-items-start">
                             <del class="col-9 mt-1 block-inline h5" id="task-title">@task.Title</del>
                             <div>
                                 <small for="my-date">Due:</small>
@@ -46,7 +47,7 @@
                             </div>
                         </a>
                         }else{
-                            <a href="/editPage/@task.Id/@task.Title/@task.IsDone" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <a href="/editPage/@task.Id/@task.Title/@task.Date" class="list-group-item list-group-item-action flex-column align-items-start">
                                 <span class="col-9 mt-1 h5" id="task-title">@task.Title</span>
                                 <div>
                                     <small for="my-date">Due:</small>
@@ -70,19 +71,19 @@
     private static List<TaskItem> taskList = new();
         
     [Parameter]
+    public string Action{get; set;}
+    [Parameter]
+    public int TaskId{get; set;}
+    [Parameter]
     public string Title{get; set;}
+    [Parameter]
+    public string TaskTitle{get; set;}
     [Parameter]
     public int Month{get; set;}
     [Parameter]
     public int Day{get; set;}
     [Parameter]
     public int Year{get; set;}
-    [Parameter]
-    public int TaskId{get; set;}
-    [Parameter]
-    public string TaskTitle{get; set;}
-    [Parameter]
-    public string Action{get; set;}
     private void NavigateToAddTaskPage(){
         NavigationManager.NavigateTo("/addTask");
     }
@@ -99,10 +100,11 @@
         taskItem.Date = date;
         taskList.Add(taskItem);
     }
-    public void UpdateTask(int id, string title){
+    public void UpdateTask(int id){
         foreach(var task in taskList){
             if(task.Id == id){
-                task.Title = title;
+                task.Title = TaskTitle;
+                task.Date = new DateOnly(Year, Month, Day);
                 break;
             }
         }

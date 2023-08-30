@@ -1,12 +1,16 @@
 @inject NavigationManager NavigationManager
 @page "/editPage"
-@page "/editPage/{TaskId:int}/{TaskTitle}/{IsDone:bool}"
+@page "/editPage/{TaskId:int}/{TaskTitle}/{Month:int}/{Day:int}/{Year:int}"
+
 
 <div class="border">
     <div class="bg-info text-center display-6">Edit Task</div>
 
-    <div class="p-2 text-center decorator-underline">
+    <div class="p-2 text-center">
         <input type="text" class="p-1" @bind="@TaskTitle">
+        <br>
+        <input type="date" class="m-3" @bind="Date">
+
         <div class="m-2 mt-5">
             <button class="btn btn-primary" @onclick="OnUpdate">UPDATE</button>
             <button class="btn btn-outline-danger" @onclick="OnDelete">DELETE</button>
@@ -14,16 +18,23 @@
     </div>
 </div>
 
+
 @code{
     [Parameter]
     public string TaskTitle{get; set;}
     [Parameter]
     public int TaskId{get; set;}
     [Parameter]
-    public bool IsDone{get; set;}
+    public int Month{get; set;}
+    [Parameter]
+    public int Day{get; set;}
+    [Parameter]
+    public int Year{get; set;}
+
+    public DateOnly Date {get; set;}
 
     public void OnUpdate(){
-        NavigationManager.NavigateTo("/manageTask/update/" + TaskId + "/" + TaskTitle);
+        NavigationManager.NavigateTo("/manageTask/update/" + TaskId + "/" + TaskTitle + "/" + Date);
     }
     public void OnDelete(){
 
