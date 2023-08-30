@@ -34,10 +34,10 @@
     public DateOnly Date {get; set;}
 
     public void OnUpdate(){
-        NavigationManager.NavigateTo("/manageTask/update/" + TaskId + "/" + TaskTitle + "/" + Date);
+        NavigationManager.NavigateTo("/manageTask/" + Operations.UPDATE + "/" + TaskId + "/" + TaskTitle + "/" + Date);
     }
     public void OnDelete(){
 
-        NavigationManager.NavigateTo("/manageTask/delete/" + TaskId + "/" + TaskTitle);
+        NavigationManager.NavigateTo("/manageTask/" + Operations.DELETE + "/" + TaskId + "/" + TaskTitle);
     }
 }

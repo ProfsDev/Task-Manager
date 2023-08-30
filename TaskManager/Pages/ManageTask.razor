@@ -10,20 +10,19 @@
 <h3>Undone Tasks (@taskList.Count(task => !task.IsDone))</h3>
 
 @switch(@Action){
-    case "add":
+    case Operations.ADD:
         DateOnly myDate = new DateOnly(year:Year, month:Month, day:Day);
         AddNewTask(@TaskTitle, myDate);
         NavigateToManageTaskPage();
         break;
 
-    case "update":
+    case Operations.UPDATE:
         UpdateTask(@TaskId);
         NavigateToManageTaskPage();
         break;
 
-    case "delete":
+    case Operations.DELETE:
         DeleteTask(@TaskId);
-        Console.WriteLine("call delete");
         NavigateToManageTaskPage();
         break;
 }

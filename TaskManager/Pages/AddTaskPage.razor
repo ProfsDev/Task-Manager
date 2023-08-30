@@ -15,6 +15,6 @@
     private string? taskTitle;
     private DateOnly? dateOnly;
     public void NavigateToManageTask(){
-        NavigationManager.NavigateTo("/manageTask/add/" + taskTitle + "/" + dateOnly);
+        NavigationManager.NavigateTo("/manageTask/" + Operations.ADD + "/" + taskTitle + "/" + dateOnly);
     }
 }
