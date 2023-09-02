@@ -16,6 +16,13 @@ Welcome to Task Manager! This application is designed to help you manage your ta
 3. **Edit Page**
    If you need to make changes to an existing task, head to the Edit Page. Here, you can modify the task title and due date of the task. This functionality ensures your task list remains accurate and up-to-date.
 
+## Screenshots 
+![Manage Task Page](https://github.com/ProfsDev/Task-Manager/blob/main/Screenshots/Manage%20Task%20page.png)
+
+![Edit Page](https://github.com/ProfsDev/Task-Manager/blob/main/Screenshots/Edit%20Page.png)
+
+![Add Task Page](https://github.com/ProfsDev/Task-Manager/blob/main/Screenshots/Add%20Page.png)
+
 ## Getting Started
 
 To run the Task Manager application locally, follow these steps:
