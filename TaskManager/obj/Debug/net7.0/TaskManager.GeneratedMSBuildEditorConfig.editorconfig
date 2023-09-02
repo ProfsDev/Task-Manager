@@ -9,41 +9,41 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = TaskManager
 build_property.RootNamespace = TaskManager
-build_property.ProjectDir = e:\Work\SCYNETT\Task Manager\Task-Manager\TaskManager\
+build_property.ProjectDir = E:\Work\SCYNETT\Task Manager\Task-Manager\TaskManager\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = e:\Work\SCYNETT\Task Manager\Task-Manager\TaskManager
+build_property.MSBuildProjectDirectory = E:\Work\SCYNETT\Task Manager\Task-Manager\TaskManager
 build_property._RazorSourceGeneratorDebug = 
 
-[e:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/App.razor]
+[E:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/Pages/AddTaskPage.razor]
+[E:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/Pages/AddTaskPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkVGFza1BhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/Pages/EditPage.razor]
+[E:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/Pages/EditPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/Pages/ManageTask.razor]
+[E:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/Pages/ManageTask.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuYWdlVGFzay5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/Shared/SurveyPrompt.razor]
+[E:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/_Imports.razor]
+[E:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/Shared/MainLayout.razor]
+[E:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-3lby01lcmp
 
-[e:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/Shared/NavMenu.razor]
+[E:/Work/SCYNETT/Task Manager/Task-Manager/TaskManager/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-i8kt2k08na
