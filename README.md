@@ -8,13 +8,13 @@ Welcome to Task Manager! This application is designed to help you manage your ta
 ## Features
 
 1. **Manage Task Page**
-   On this page, you can view a list of both completed and pending tasks. The page also displays the total number of tasks that are yet to be completed, giving you a quick overview of your workload.
+   On this page, you can view a list of both completed and pending tasks. The page also displays the total number of tasks that are yet to be completed, giving you a quick overview of your workload. Each task is accompanied by its respective due date.
 
 2. **Add Page**
-   Use the Add Page to input the title of new tasks.
+   Use the Add Page to input the title of new tasks. When adding a task, you can specify the task title and its due date. This feature helps you keep track of upcoming tasks.
 
 3. **Edit Page**
-   If you need to make changes to an existing task, head to the Edit Page. Here, you can modify task. This functionality ensures your task list remains accurate and up-to-date.
+   If you need to make changes to an existing task, head to the Edit Page. Here, you can modify the task title and due date of the task. This functionality ensures your task list remains accurate and up-to-date.
 
 ## Getting Started
 
