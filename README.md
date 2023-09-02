@@ -17,7 +17,7 @@ Welcome to Task Manager! This application is designed to help you manage your ta
    If you need to make changes to an existing task, head to the Edit Page. Here, you can modify the task title and due date of the task. This functionality ensures your task list remains accurate and up-to-date.
 
 ## Screenshots 
-![Manage Task Page](https://github.com/ProfsDev/Task-Manager/blob/main/Screenshots/Manage%20Task%20page.jpg)
+![Manage Task page](https://github.com/ProfsDev/Task-Manager/assets/121055999/3c3da194-be28-47bc-8471-88b38a0b8e58)
 
 ![Edit Page](https://github.com/ProfsDev/Task-Manager/blob/main/Screenshots/Edit%20Page.png)
 
