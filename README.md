@@ -19,9 +19,9 @@ Welcome to Task Manager! This application is designed to help you manage your ta
 ## Screenshots 
 ![Manage Task page](https://github.com/ProfsDev/Task-Manager/assets/121055999/3c3da194-be28-47bc-8471-88b38a0b8e58)
 
-![Edit Page](https://github.com/ProfsDev/Task-Manager/blob/main/Screenshots/Edit%20Page.png)
+![Edit Page](https://github.com/ProfsDev/Task-Manager/assets/121055999/a0afda13-2452-48ae-9bcb-91689e8a5c78)
 
-![Add Task Page](https://github.com/ProfsDev/Task-Manager/blob/main/Screenshots/Add%20Page.png)
+![Add Page](https://github.com/ProfsDev/Task-Manager/assets/121055999/facd16be-ea3c-48f6-bbc4-a6f6df78130d)
 
 ## Getting Started
 
